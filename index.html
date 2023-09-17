@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>loneWolf</title>
+        <link rel="icon" href="/favicon-32x32.png">
+        <link rel="stylesheet" href="indexPassword.css">
+    </head>
+    <body>
+        <div class="container">
+                <h1>Password Generator</h1>
+                <div class="passwordText"> 
+                    <input readonly class="display" placeholder="Password" data-passwordDisplay>
+                    <button id="copyBtn">
+                        <span data-displayCopy class="copyMsg"></span>
+                        <img src="copy-im.png" width="23" height="23">
+                    </button>
+                </div>
+                <div class="generator-container">
+                    <div class="lengthContainer">
+                        <p>Length</p>
+                        <p data-lengthNumber id="lengthP">10</p>
+                    </div> 
+                    <input class="slider" type="range" min="0" max="25" value="10" step="1">
+                    <div class="check">
+                        <input type="checkbox" id="uppercase">
+                        <label for="uppercase">Include Upper Case</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" id="lowercase">
+                        <label for="lowercase">Include Lowercase Letters</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" id="number">
+                        <label for="number">Include Numbers</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" id="characters">
+                        <label for="characters">Special Characters</label>
+                    </div>
+                    <div class="strength">
+                        <p>Strength </p><span class="dot" id="indicator"></span>
+                    </div>
+                    <button type="submit" class="generatePassword">Generate</button>
+                </div>
+        </div>
+        <script src="indexPassword.js"></script>
+    </body>
+</html>
